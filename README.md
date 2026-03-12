@@ -54,47 +54,46 @@ Route Navigator is a backend REST API built with **Java Spring Boot 4** that hel
 ## Project Structure
 
 ```
-route-navigator/
-│
-├── src/main/java/com/navigation/routenavigator/
-│   │
-│   ├── controller/
-│   │   ├── RouteController.java
-│   │   └── HistoryController.java
-│   │
-│   ├── service/
-│   │   ├── RouteService.java
-│   │   ├── ETAService.java
-│   │   ├── FuelService.java
-│   │   └── HistoryService.java
-│   │
-│   ├── repository/
-│   │   ├── UserRepository.java
-│   │   └── SearchHistoryRepository.java
-│   │
-│   ├── model/
-│   │   ├── User.java
-│   │   └── SearchHistory.java
-│   │
-│   ├── dto/
-│   │   ├── RouteRequestDTO.java
-│   │   ├── RouteResponseDTO.java
-│   │   ├── ApiResponseDTO.java
-│   │   └── HistorySaveRequestDTO.java
-│   │
-│   ├── exception/
-│   │   ├── ResourceNotFoundException.java
-│   │   ├── InvalidInputException.java
-│   │   ├── ApiCallException.java
-│   │   └── GlobalExceptionHandler.java
-│   │
-│   └── config/
-│       └── AppConfig.java
-│
-├── src/main/resources/
-│   └── application.properties
-│
-└── pom.xml
+src
+└── main
+    └── java
+        └── com
+            └── navigation
+                └── route_navigator
+                    │   RouteNavigatorApplication.java
+                    │
+                    ├── config
+                    │       AppConfig.java
+                    │
+                    ├── controller
+                    │       HistoryController.java
+                    │       RouteController.java
+                    │
+                    ├── dto
+                    │       ApiResponse.java
+                    │       HistorySaveRequest.java
+                    │       RouteRequest.java
+                    │       RouteResponse.java
+                    │
+                    ├── entities
+                    │       SearchHistoryEntity.java
+                    │       UserEntity.java
+                    │
+                    ├── exceptions
+                    │       ApiCallException.java
+                    │       GlobalExceptionHandler.java
+                    │       InvalidInputException.java
+                    │       ResourceNotFoundException.java
+                    │
+                    ├── repository
+                    │       SearchHistoryRepository.java
+                    │       UserRepository.java
+                    │
+                    └── service
+                            ETAService.java
+                            FuelService.java
+                            HistoryService.java
+                            RouteService.java
 ```
 
 ---
